@@ -15,7 +15,7 @@
  * limitations under the License.
  *
  */
-import SplunkOtelWeb from '@splunk/otel-web'
+import { SplunkRum } from '@splunk/otel-web'
 import SplunkSessionRecorder from '@splunk/otel-web-session-recorder'
 
 // Read configuration from environment variables (injected by webpack)
@@ -25,7 +25,7 @@ const applicationName = process.env.SPLUNK_RUM_APPLICATION_NAME || 'splunk-otel-
 const deploymentEnvironment = process.env.SPLUNK_RUM_ENVIRONMENT || 'development'
 const debug = process.env.SPLUNK_RUM_DEBUG === 'true'
 
-SplunkOtelWeb.init({
+SplunkRum.init({
 	applicationName,
 	debug,
 	deploymentEnvironment,

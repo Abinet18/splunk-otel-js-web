@@ -13,7 +13,7 @@ Open <http://localhost:9100/> to open the app and start producing telemetry data
 Add `rumAccessToken` and change `beaconEndpoint` in the instrumentation initialisation object:
 
 ```js
-SplunkOtelWeb.init({
+SplunkRum.init({
   ...
   beaconEndpoint: 'https://rum-ingest.us0.observability.splunkcloud.com/api/v2/spans',
   rumAccessToken: 'xxx', // TODO: describe how to get the token
@@ -34,9 +34,9 @@ Note: in modern versions of NPM, installed packages are added to `package.json` 
 Add a file, which will initialise instrumentation (in our case `./src/instrumentation.ts`):
 
 ```js
-import SplunkOtelWeb from '@splunk/otel-web'
+import { SplunkRum } from '@splunk/otel-web'
 
-SplunkOtelWeb.init({
+SplunkRum.init({
 	// we will provision a temporary local backend for testing in a few steps
 	beaconEndpoint: 'http://localhost:9411/api/v2/spans',
 	allowInsecureBeacon: true,

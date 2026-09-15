@@ -15,10 +15,10 @@
  * limitations under the License.
  *
  */
-import SplunkOtelWeb from '@splunk/otel-web'
+import { SplunkRum } from '@splunk/otel-web'
 import SplunkSessionRecorder from '@splunk/otel-web-session-recorder'
 
-SplunkOtelWeb.init({
+SplunkRum.init({
 	applicationName: process.env.NEXT_PUBLIC_SPLUNK_RUM_APPLICATION_NAME,
 	beaconEndpoint: process.env.NEXT_PUBLIC_SPLUNK_RUM_BEACON_ENDPOINT,
 	deploymentEnvironment: process.env.NEXT_PUBLIC_SPLUNK_RUM_DEPLOYMENT_ENVIROMENT,

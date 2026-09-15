@@ -82,10 +82,10 @@ To instrument a Next.js application with the Splunk NPM package, create a file c
 See the Next.js [docs for client-side instrumentation](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client) for more information.
 
 ```ts
-import SplunkOtelWeb from '@splunk/otel-web'
+import { SplunkRum } from '@splunk/otel-web'
 import SplunkSessionRecorder from '@splunk/otel-web-session-recorder'
 
-SplunkOtelWeb.init({
+SplunkRum.init({
 	beaconEndpoint: process.env.NEXT_PUBLIC_SPLUNK_RUM_BEACON_ENDPOINT,
 	rumAccessToken: process.env.NEXT_PUBLIC_SPLUNK_RUM_ACCESS_TOKEN,
 	applicationName: process.env.NEXT_PUBLIC_SPLUNK_RUM_APPLICATION_NAME,

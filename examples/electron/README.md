@@ -51,7 +51,7 @@ The Splunk Browser SDK **only supports monitoring the renderer processes** of an
 **Critical Configuration:** When building Electron apps that use local files (`file://` protocol), you **must** set `persistence: 'localStorage'` in the RUM initialization:
 
 ```typescript
-SplunkOtelWeb.init({
+SplunkRum.init({
 	// ... other config
 	persistence: 'localStorage', // Required for file:// protocol
 })

@@ -15,9 +15,9 @@
  * limitations under the License.
  *
  */
-import SplunkOtelWeb from '@splunk/otel-web'
+import { SplunkRum } from '@splunk/otel-web'
 
-SplunkOtelWeb.init({
+SplunkRum.init({
 	allowInsecureBeacon: true,
 	applicationName: 'splunk-otel-web-example-npm',
 	beaconEndpoint: 'http://localhost:9101/api/v2/spans',
